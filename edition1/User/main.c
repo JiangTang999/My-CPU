@@ -9,6 +9,20 @@
 #include "OLED.h"
 #include "Serial.h"
 
+void get_array_data(float position[200][3])
+{
+	// 调用函数采集数据
+    if (get_pitch_roll_yaw(position) == 0) {
+        // 打印采样数据
+        for (int i = 0; i < 2 * 100; i++) {
+            printf("Data %d: [Pitch: %.2f, Roll: %.2f, Yaw: %.2f]\n", i+1, position[i][0], position[i][1], position[i][2]);
+        }
+    } else {
+        printf("数据采集失败。\n");
+    }
+}
+
+
 int main(void)
 {
     float position[2*100][3];
@@ -37,16 +51,10 @@ int main(void)
         }
 
        // 获取角速度和加速度数据
+				
+				get_array_data(position);//调用
 
-    // 调用函数采集数据
-    if (get_pitch_roll_yaw(position) == 0) {
-        // 打印采样数据
-        for (int i = 0; i < 2 * 100; i++) {
-            printf("Data %d: [Pitch: %.2f, Roll: %.2f, Yaw: %.2f]\n", i+1, position[i][0], position[i][1], position[i][2]);
-        }
-    } else {
-        printf("数据采集失败。\n");
-    }
+    
 		
       sprintf(pitch_str, "Pitch: %.2f", pitch);
       sprintf(roll_str, "Roll: %.2f", roll);
