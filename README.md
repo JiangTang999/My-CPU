@@ -1,1 +1,2 @@
-# My-CPU
+10.15日更新：1.在inv_mpu.c文件中添加get_pitch_roll_yaw函数 2.在主函数中添加get_array_data函数并调用。
+现存问题：1.get_pitch_roll_yaw函数采样频率需要修改，在其.c文件中宏定义了DURATION持续时间和SAMPLE_RATE采样频率 2.这个函数是GPT写的，sleep函数未定义，可以考虑include<windows.h>或者采用TIM并配置中断函数。
