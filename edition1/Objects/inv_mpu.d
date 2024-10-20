@@ -1,10 +1,9 @@
 .\objects\inv_mpu.o: Hardware\inv_mpu.c
-.\objects\inv_mpu.o: E:\keil5_v5.24\ARM\ARMCC\Bin\..\include\stdio.h
-.\objects\inv_mpu.o: E:\keil5_v5.24\ARM\ARMCC\Bin\..\include\stdint.h
-.\objects\inv_mpu.o: E:\keil5_v5.24\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\inv_mpu.o: E:\keil5_v5.24\ARM\ARMCC\Bin\..\include\string.h
-.\objects\inv_mpu.o: E:\keil5_v5.24\ARM\ARMCC\Bin\..\include\math.h
-.\objects\inv_mpu.o: E:\keil5_v5.24\ARM\ARMCC\Bin\..\include\time.h
+.\objects\inv_mpu.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\inv_mpu.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\inv_mpu.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\inv_mpu.o: D:\Keil5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\inv_mpu.o: D:\Keil5\ARM\ARMCC\Bin\..\include\math.h
 .\objects\inv_mpu.o: Hardware\inv_mpu.h
 .\objects\inv_mpu.o: .\Start\stm32f10x.h
 .\objects\inv_mpu.o: .\Start\core_cm3.h

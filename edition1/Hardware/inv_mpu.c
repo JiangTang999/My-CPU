@@ -22,7 +22,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
-#include <time.h>
 #include "inv_mpu.h"
 #include "inv_mpu_dmp_motion_driver.h"
 #include "mpu6050.h"
@@ -32,8 +31,6 @@
 
 #define MPU6050							//定义我们使用的传感器为MPU6050
 #define MOTION_DRIVER_TARGET_MSP430		//定义驱动部分,采用MSP430的驱动(移植到STM32F1)
-#define SAMPLE_RATE 100  // ???????
-#define DURATION 2       // ????,?????
 
 /* The following functions must be defined for this platform:
  * i2c_write(unsigned char slave_addr, unsigned char reg_addr,
@@ -3022,35 +3019,6 @@ u8 mpu_dmp_get_data(float *pitch,float *roll,float *yaw)
 	return 0;
 }
 
-int get_pitch_roll_yaw(float data[DURATION * SAMPLE_RATE][3]) {
-    float pitch, roll, yaw;
-    int count = 0;
-
-    // ??????
-    time_t start_time = time(NULL);
-
-    // ??????????
-    while ((time(NULL) - start_time) < DURATION) {
-        if (mpu_dmp_get_data(&pitch, &roll, &yaw) == 0) {
-            data[count][0] = pitch;
-            data[count][1] = roll;
-            data[count][2] = yaw;
-            count++;
-
-            // ???????????,????
-            if (count >= DURATION * SAMPLE_RATE) {
-                break;
-            }
-
-            // ????????????
-            Sleep(1000 / SAMPLE_RATE); // 这里需要修改成TIM的配置！
-        } else {
-            return 1;  // ??????
-        }
-    }
-
-    return 0;  // ??????
-}
 
 
 

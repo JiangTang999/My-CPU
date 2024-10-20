@@ -1,7 +1,7 @@
 .\objects\main.o: User\main.c
 .\objects\main.o: .\Start\stm32f10x.h
 .\objects\main.o: .\Start\core_cm3.h
-.\objects\main.o: E:\keil5_v5.24\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\main.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\main.o: .\Start\system_stm32f10x.h
 .\objects\main.o: .\User\stm32f10x_conf.h
 .\objects\main.o: .\Library\stm32f10x_adc.h
@@ -32,10 +32,10 @@
 .\objects\main.o: .\System\sys.h
 .\objects\main.o: .\Hardware\led.h
 .\objects\main.o: .\System\usart.h
-.\objects\main.o: E:\keil5_v5.24\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\main.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\main.o: .\Hardware\mpu6050.h
 .\objects\main.o: .\Hardware\mpuiic.h
 .\objects\main.o: .\Hardware\inv_mpu.h
 .\objects\main.o: .\Hardware\inv_mpu_dmp_motion_driver.h
 .\objects\main.o: .\Hardware\OLED.h
-.\objects\main.o: .\Hardware\Serial.h
+.\objects\main.o: .\Hardware\button.h

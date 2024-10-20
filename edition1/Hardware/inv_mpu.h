@@ -32,7 +32,6 @@
 #define INV_XYZ_ACCEL   (0x08)
 #define INV_XYZ_COMPASS (0x01)
 
-
 //移植官方MSP430 DMP驱动过来
 struct int_param_s {
 //#if defined EMPL_TARGET_MSP430 || defined MOTION_DRIVER_TARGET_MSP430
@@ -135,8 +134,6 @@ unsigned short inv_orientation_matrix_to_scalar(const signed char *mtx);
 u8 run_self_test(void);
 u8 mpu_dmp_init(void);
 u8 mpu_dmp_get_data(float *pitch,float *roll,float *yaw);
-int get_pitch_roll_yaw(float data[2 * 100][3]);
-
 
 #endif  /* #ifndef _INV_MPU_H_ */
 
